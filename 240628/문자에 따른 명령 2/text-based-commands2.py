@@ -12,5 +12,5 @@ for i in arr:
     elif i == "R": #시계 방향
         dir_num = (dir_num + 1) % 4
     elif i == "F":
-        nx, ny = x + dx[dir_num], y + dy[dir_num]
-print(nx, ny)
+        x, y = x + dx[dir_num], y + dy[dir_num]
+print(x, y)
