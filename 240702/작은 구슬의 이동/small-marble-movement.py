@@ -3,7 +3,7 @@ input = sys.stdin.readline
 
 n, t = map(int, input().split())
 r, c, d = input().split()
-r, c = int(r), int(c)
+r, c = int(r) - 1, int(c) - 1
 
 mapper = {
     'R': 0,
@@ -20,9 +20,9 @@ def in_range(x, y):
     return 0 <= r and x < n and 0 <= y and y < n
 
 while t > 0:
-    if not in_range(r-1, c-1):
+    if not in_range(r, c):
         dir_num = 3 - dir_num
         t += 1
     r, c = r + dxs[dir_num], c + dys[dir_num]
     t -= 1
-print(r, c)
+print(r+1, c+1)
