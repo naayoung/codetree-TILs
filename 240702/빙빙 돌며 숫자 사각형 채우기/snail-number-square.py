@@ -12,7 +12,7 @@ answer = [
 
 #범위 내 확인
 def in_range(x, y):
-    return 0 <= x and x < n and 0 <= y and y < m
+    return 0 <= x and x < m and 0 <= y and y < n
 
 #그래프
 dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0]
