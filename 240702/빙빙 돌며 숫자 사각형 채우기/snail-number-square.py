@@ -33,7 +33,7 @@ for _ in range(2, n*m+1):
     answer[x][y] = count
 
 #출력
-for i in range(n):
-    for j in range(m):
+for i in range(m):
+    for j in range(n):
         print(answer[i][j], end = ' ')
     print()
