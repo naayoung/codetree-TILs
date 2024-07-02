@@ -15,17 +15,18 @@ mapper = {
 dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0]
 
 x, y = 0, 0
-dx, dy = 0, 0
 count = 0
 answer = -1
-for _ in range(n):
+while n > 0:
     dir_num, m = map(str, input().split())
     m = int(m)
 
     for _ in range(m):
-        dx, dy = dx + dxs[mapper[dir_num]], dy + dys[mapper[dir_num]]
+        x, y = x + dxs[mapper[dir_num]], y + dys[mapper[dir_num]]
         count += 1
-        if dx == x and dy == y:
+        n -= 1
+
+        if x == 0 and y == 0:
             answer = count
-            break
+            n = 0
 print(answer)
