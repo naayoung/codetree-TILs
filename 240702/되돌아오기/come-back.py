@@ -20,11 +20,11 @@ answer = -1
 while n > 0:
     dir_num, m = map(str, input().split())
     m = int(m)
+    n -= 1
 
     for _ in range(m):
         x, y = x + dxs[mapper[dir_num]], y + dys[mapper[dir_num]]
         count += 1
-        n -= 1
 
         if x == 0 and y == 0:
             answer = count
