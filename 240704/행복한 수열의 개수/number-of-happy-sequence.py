@@ -6,8 +6,10 @@ graph = []
 for _ in range(n):
     graph.append(list(map(int, input().split())))
 
-if m == 1:
+if n > 1 and m == 1:
     print(n*(n-1))
+elif n == 1:
+    print(2)
 else:
     count = 0
     graph2 = []
