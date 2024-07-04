@@ -16,6 +16,6 @@ for i in range(n):
     temp = set(graph[i])
     temp2 = set(graph2[i])
 
-    if len(temp) < 3 or len(temp2) < 3:
+    if len(temp) < m+1 or len(temp2) < m+1:
         count += 1
 print(count)
