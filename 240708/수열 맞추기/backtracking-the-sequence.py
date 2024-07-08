@@ -1,27 +1,26 @@
+from collections import deque
 import sys
 input = sys.stdin.readline
 
 n = int(input().strip())
 a = list(map(int, input().split()))
 
-answer = [0] * n
-count = n+1
+result = deque()
+current = 1  # 현재 처리할 값
 
-for i in a:
-    count -= 1
-    if i == 1:
-        for j in range(n):
-            if answer[j] == 0:
-                answer[j] = count
-                break
-    elif i == 2:
-        for j in range(1, n):
-            if answer[j] == 0:
-                answer[j] = count
-                break
-    else:
-        for j in range(n-1, -1, -1):
-            if answer[j] == 0:
-                answer[j] = count
-                break
-print(*answer)
+for op in reversed(a):
+    if op == 1:
+        # 가장 앞 원소를 처리
+        result.appendleft(current)
+    elif op == 2:
+        # 두 번째 원소를 처리
+        if len(result) >= 1:
+            result.insert(1, current)
+        else:
+            result.appendleft(current)
+    elif op == 3:
+        # 가장 뒤 원소를 처리
+        result.append(current)
+    current += 1
+
+print(*result)
