@@ -1,17 +1,14 @@
 import sys
 input = sys.stdin.readline
 
+answer = []
 while True:
     dic = input().strip()
-    answer = []
     if dic == "end":
         break
     else:
-        dic_list = list(dic.split())
-        for i in dic_list:
-            if i in answer:
-                continue
-            else:
-                answer.append(i)
-        answer.sort()
+        dic_list = dic.split()
+        for word in dic_list:
+            if word not in answer:
+                answer.append(word)
         print(*answer)
