@@ -5,10 +5,10 @@ n = int(input().strip())
 a = list(map(int, input().split()))
 
 answer = [0] * n
-count = 0
+count = 7
 
 for i in a:
-    count += 1
+    count -= 1
     if i == 1:
         for j in range(n):
             if answer[j] == 0:
@@ -20,6 +20,8 @@ for i in a:
                 answer[j] = count
                 break
     else:
-        answer.append(count)
-answer.reverse()
+        for j in range(n-1, -1, -1):
+            if answer[j] == 0:
+                answer[j] = count
+                break
 print(*answer)
