@@ -5,7 +5,7 @@ n = int(input().strip())
 a = list(map(int, input().split()))
 
 answer = [0] * n
-count = 7
+count = n+1
 
 for i in a:
     count -= 1
