@@ -6,12 +6,12 @@ graph = []
 for _ in range(n+1):
     graph.append(list(map(int, input().split())))
     
-answer = [[0]*(n+1) for _ in range(n+1)]
-visited = [[0]*(n+1) for _ in range(n+1)]
+answer = [[0]* m for _ in range(n)]
+visited = [[0]* m for _ in range(n)]
 order = 1
 
 def in_range(x, y):
-    return 0 <= x and x < n and 0 <= y and y < n
+    return 0 <= x and x < n and 0 <= y and y < m
 
 def can_go(x, y):
     if not in_range(x, y):
@@ -41,7 +41,7 @@ order += 1
 visited[0][0] = 1
 
 dfs(0, 0)
-if answer[n-1][n-1] == 0:
+if answer[n-1][m-1] == 0:
     print(0)
 else:
     print(1)
