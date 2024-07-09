@@ -27,9 +27,9 @@ def can_go(x, y):
 
 def dfs(x, y):
     global count
-    
+
     # 0: 오른쪽, 1: 아래쪽, 2: 왼쪽, 3: 위쪽
-    dxs, dys = [0, 1, 0, -1], [1, 0, -1, 1]
+    dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0]
 
     for dx, dy in zip(dxs, dys):
         new_x, new_y = x + dx, y + dy
