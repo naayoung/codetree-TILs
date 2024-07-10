@@ -41,8 +41,12 @@ def get_block(k):
         for j in range(n):
             if can_go(i, j, k):
                 visited[i][j] = 1
-                block += 1
+                
                 dfs(i, j, k)
+
+                if count >= 4:
+                    block += 1
+
 
 answer = []
 block = 0
@@ -50,5 +54,5 @@ for k in range(1, 101):
     get_block(k)
 
     answer.append(count)
-    
+
 print(block, max(answer))
