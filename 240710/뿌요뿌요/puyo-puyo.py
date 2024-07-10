@@ -33,8 +33,9 @@ def dfs(x, y, k):
             dfs(nx, ny, k)
 
 def get_block(k):
-    global count, block
+    global count, block, visited
 
+    visited = [[0] * n for _ in range(n)]
     for i in range(n):
         for j in range(n):
             if can_go(i, j, k):
@@ -52,7 +53,5 @@ answer = []
 block = 0
 for k in range(1, 101):
     get_block(k)
-
-    visited = [[0] * n for _ in range(n)]
 
 print(block, max(answer))
