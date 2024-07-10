@@ -33,13 +33,11 @@ def dfs(x, y, k):
             dfs(nx, ny, k)
 
 def get_zone_num(k):
-    global count
+    global count, visited
     
     #초기화
     count = 0
-    for i in range(n):
-        for j in range(m):
-            visited[i][j] = 0
+    visited = [[0] * m for _ in range(n)]
 
     for i in range(n):
         for j in range(m):
