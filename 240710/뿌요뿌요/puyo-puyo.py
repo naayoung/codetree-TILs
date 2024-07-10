@@ -8,7 +8,6 @@ for _ in range(n):
     graph.append(list(map(int, input().split())))
 
 visited = [[0] * n for _ in range(n)]
-count = 1
 
 def in_range(x, y):
     return 0 <= x and x < n and 0 <= y and y < n
@@ -24,33 +23,36 @@ def dfs(x, y, k):
     global count
     dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0]
 
+    visited[x][y] = 1
+    count += 1
+
     for dx, dy in zip(dxs, dys):
         nx, ny = x + dx, y + dy
 
         if can_go(nx, ny, k):
-            visited[nx][ny] = 1
-            count += 1
             dfs(nx, ny, k)
 
 def get_block(k):
-    global count, visited, block
-    count = 1
-    visited = [[0] * n for _ in range(n)]
+    global count, block
 
     for i in range(n):
         for j in range(n):
             if can_go(i, j, k):
                 visited[i][j] = 1
+                count = 0
                 
                 dfs(i, j, k)
-                answer.append(count)
+
                 if count >= 4:
                     block += 1
+                answer.append(count)
 
 
 answer = []
 block = 0
 for k in range(1, 101):
     get_block(k)
+
+    visited = [[0] * n for _ in range(n)]
 
 print(block, max(answer))
