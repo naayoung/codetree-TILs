@@ -29,7 +29,7 @@ def dfs(x, y, k):
 
         if can_go(nx, ny, k):
             visited[nx][ny] = 1
-
+            count += 1
             dfs(nx, ny, k)
 
 def get_block(k):
@@ -41,8 +41,7 @@ def get_block(k):
         for j in range(n):
             if can_go(i, j, k):
                 visited[i][j] = 1
-                count += 1
-
+                
                 dfs(i, j, k)
 
 answer = []
