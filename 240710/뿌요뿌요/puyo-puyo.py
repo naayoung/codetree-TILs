@@ -43,7 +43,7 @@ def get_block(k):
                 visited[i][j] = 1
                 
                 dfs(i, j, k)
-
+                answer.append(count)
                 if count >= 4:
                     block += 1
 
@@ -52,7 +52,5 @@ answer = []
 block = 0
 for k in range(1, 101):
     get_block(k)
-
-    answer.append(count)
 
 print(block, max(answer))
