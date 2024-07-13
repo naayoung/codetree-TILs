@@ -9,16 +9,18 @@ for _ in range(m):
     graph[a].append(b)
 
 visited = [0] * (n+1)
-answer = []
+
 def dfs(n):
     global count
 
+    count += 1
+    visited[n] = 1
+
     for i in graph[n]:
         if not visited[i]:
-            count += 1
-            visited[i] = 1
             dfs(i)
 
+answer = []
 for i in range(1, n+1):
     count = 0
     visited = [0] * (n+1)
