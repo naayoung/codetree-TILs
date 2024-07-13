@@ -40,6 +40,7 @@ for i in range(n):
 
             dfs(i, j)
             answer.append(count)
+answer.sort()
 print(len(answer))
 for i in answer:
     print(i)
