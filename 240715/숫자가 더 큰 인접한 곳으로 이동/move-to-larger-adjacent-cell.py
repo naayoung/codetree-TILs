@@ -17,7 +17,7 @@ def can_go(x, y, curr_num):
 
 def simulate():
     global r, c
-    dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0]
+    dxs, dys = [-1, 1, 0, 0], [0, 0, -1, 1]
 
     for dx, dy in zip(dxs, dys):
         nx, ny = r + dx, c + dy
