@@ -35,7 +35,7 @@ def bfs():
 
 for _ in range(k):
     r, c = map(int, input().split())
-    q.append((r, c))
-    visited[r][c] = 1
+    q.append((r-1, c-1))
+    visited[r-1][c-1] = 1
     bfs()
 print(count)
