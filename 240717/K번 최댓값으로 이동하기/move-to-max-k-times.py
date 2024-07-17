@@ -23,11 +23,6 @@ def can_go(x, y, target_num):
         return False
     return True
 
-def initialize_visited():
-    for i in range(n):
-        for j in range(n):
-            visited[i][j] = False
-
 def bfs():
     dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0]
 
@@ -56,9 +51,9 @@ def need_update(best_pos, new_pos):
     return (graph[nx][ny], -nx, -ny) > (graph[best_x][best_y], -best_x, -best_y)
 
 def move():
-    global answer
+    global answer, visited
 
-    initialize_visited()
+    visited = [[0] * n for _ in range(n)]
 
     bfs()
     
