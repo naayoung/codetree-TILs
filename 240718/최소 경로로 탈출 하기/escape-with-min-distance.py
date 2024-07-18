@@ -38,4 +38,8 @@ q.append((0, 0))
 visited[0][0] = 1
 
 bfs()
-print(answer[n-1][m-1])
+
+if answer[n-1][m-1] != 0:
+    print(answer[n-1][m-1])
+else:
+    print(-1)
