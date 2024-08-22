@@ -4,7 +4,8 @@ num = list(map(int, input().split()))
 answer = []
 max_num = max(num)
 max_num_index = num.index(max(num)) + 1
-
+if max_num_index == 1:
+    answer.append(max_num_index)
 while max_num_index > 1:
     max_num = max(num)
     max_num_index = num.index(max(num)) + 1
