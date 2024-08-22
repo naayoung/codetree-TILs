@@ -8,6 +8,5 @@ while a > 1:
     temp[a%b] += 1
 
 for i in temp:
-    if i != 0:
-        answer += i*i
+    answer += i*i
 print(answer)
