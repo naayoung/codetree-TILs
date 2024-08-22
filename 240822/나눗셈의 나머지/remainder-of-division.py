@@ -1,6 +1,6 @@
 a, b = map(int, input().split())
 
-temp = [0] * 9
+temp = [0] * 10
 answer = 0
 
 while a > 1:
