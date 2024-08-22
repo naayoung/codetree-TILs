@@ -8,5 +8,5 @@ while a > 1:
     temp[a%b] += 1
 
 for i in temp:
-    answer += i*i
+    answer += i**2
 print(answer)
