@@ -1,5 +1,5 @@
 n, m = map(int, input().split())
-nums = [list(map(int, input().split())) for _ in range(n)]
+nums = [list(map(int, input().split())) for _ in range(m)]
 
 answer = [[0]*n for _ in range(n)]
 for num in nums:
