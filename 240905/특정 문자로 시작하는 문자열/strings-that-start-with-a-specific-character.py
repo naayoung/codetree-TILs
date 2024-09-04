@@ -5,7 +5,7 @@ for _ in range(n):
 temp = input()
 
 for i in word:
-    if temp not in i:
+    if i[0] != temp:
         word.remove(i)
 
 temp2 = 0
