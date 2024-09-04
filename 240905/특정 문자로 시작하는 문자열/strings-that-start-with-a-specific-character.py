@@ -4,12 +4,12 @@ for _ in range(n):
     word.append(input())
 temp = input()
 
-for i in word:
-    if i[0] != temp:
-        word.remove(i)
-
+word2 = []
+for i in word:  
+    if i[0] == temp:
+        word2.append(i)
 temp2 = 0
-for i in word:
+for i in word2:
     temp2 += len(i)
 
-print(f"{len(word)}", f"{temp2/len(word):.2f}")
+print(len(word2), f"{temp2/len(word2):.2f}")
