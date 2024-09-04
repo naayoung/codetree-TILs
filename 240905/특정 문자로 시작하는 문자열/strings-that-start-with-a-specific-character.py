@@ -12,4 +12,4 @@ temp2 = 0
 for i in word:
     temp2 += len(i)
 
-print(len(word), f"{temp2/len(word):.2f}")
+print(f"{len(word)}", f"{temp2/len(word):.2f}")
