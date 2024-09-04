@@ -13,9 +13,8 @@ for i in range(len(word)):
         temp = word[i]
         cnt = 1
 
-    if i == len(word)-1:
-        answer.append(temp)
-        answer.append(str(cnt))
+answer.append(temp)
+answer.append(str(cnt))
 
 answer_final = ''.join(answer)
 
