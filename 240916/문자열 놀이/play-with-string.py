@@ -1,4 +1,5 @@
 s, q = input().split()
+s = list(s)
 q = int(q)
 
 for _ in range(q):
@@ -6,7 +7,6 @@ for _ in range(q):
     x = int(x)
 
     if x == 1:
-        s = list(s)
         y, z = int(y), int(z)
         s[y-1], s[z-1] = s[z-1], s[y-1]
         print(''.join(s))
@@ -15,4 +15,5 @@ for _ in range(q):
         for i in s:
             temp = i.replace(y, z)
             answer.append(temp)
-        print(''.join(answer))
+        s = answer
+        print(''.join(s))
