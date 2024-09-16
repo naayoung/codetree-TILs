@@ -11,4 +11,4 @@ while True:
         break
     else:
         cnt += 1
-        a = a[1:] + a[0]
+        a = a[-1] + a[:-1]
