@@ -1,3 +1,6 @@
 w = input()
-temp = ord(w) - 1
-print(chr(temp))
+if ord(w) == 97:
+    print('z')
+else:
+    temp = ord(w) - 1
+    print(chr(temp))
