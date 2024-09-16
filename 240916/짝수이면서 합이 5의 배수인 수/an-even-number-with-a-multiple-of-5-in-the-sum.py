@@ -1,5 +1,5 @@
-def pro(ans):
-    if ans%5 == 0:
+def pro(ans, temp):
+    if ans%5 == 0 and temp%2 == 0:
         print('Yes')
     else:
         print('No')
@@ -9,4 +9,5 @@ ans = 0
 for i in n:
     i = int(i)
     ans += i
-pro(ans)
+temp = int(''.join(n))
+pro(ans, temp)
