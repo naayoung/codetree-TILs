@@ -4,11 +4,11 @@ Y, M, D = map(int, input().split())
 def confirm_year(Y):
     #윤년 확인
     if Y%4 == 0:
+        return True
         if Y%100 == 0:
             return False
         elif Y%400 == 0:
             return True
-        return True
     else:
         return False
 
