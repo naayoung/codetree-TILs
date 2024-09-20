@@ -4,7 +4,7 @@ B = list(map(int, input().split()))
 
 def sol(A, B, n1, n2):
     cnt = 0
-    for i in range(n1-n2-1):
+    for i in range(n1-n2+1):
         if A[i:i+n2] == B:
             cnt += 1
     if cnt == 1:
