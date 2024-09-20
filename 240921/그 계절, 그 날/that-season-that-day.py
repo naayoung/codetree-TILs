@@ -16,12 +16,12 @@ def confirm_year(Y):
 
 #Y해에 M월 D일이 존재하는 지 확인
 def sol(Y, M, D):
-    if M == 2 and D == 29:
-        if confirm_year(Y) == 'True':
+    if M == 2 and D >= 29:
+        if confirm_year(Y) == 'True' and D == 29:
             return True
         else:
             return False
-    if M == 2 or M == 4 or M == 6 or M == 9 or M == 11:
+    if M == 4 or M == 6 or M == 9 or M == 11:
         if D == 31:
             return False
         else:
