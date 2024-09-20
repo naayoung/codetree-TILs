@@ -4,18 +4,20 @@ Y, M, D = map(int, input().split())
 def confirm_year(Y):
     #윤년 확인
     if Y%4 == 0:
-        return True
-        if Y%100 == 0:
-            return False
-        elif Y%400 == 0:
-            return True
+        if Y%100 == 0 and Y%400 == 0:
+            answer = 'True'
+        elif Y%100 == 0:
+            answer = 'False'
+        else:
+            answer = 'True'
     else:
-        return False
+        answer = 'False'
+    return answer
 
 #Y해에 M월 D일이 존재하는 지 확인
 def sol(Y, M, D):
     if M == 2 and D == 29:
-        if confirm_year(Y):
+        if confirm_year(Y) == 'True':
             return True
         else:
             return False
