@@ -3,17 +3,17 @@ Y, M, D = map(int, input().split())
 
 def confirm_year(Y):
     # 4의 배수가 아니라면 윤년이 확실히 아닙니다.
-    if y % 4 != 0:
+    if Y % 4 != 0:
         return False
     
     # 여기까지 온 이상 4의 배수임을 가정해도 됩니다.
     # 그 중 100의 배수가 아니라면 확실히 윤년입니다.
-    if y % 100 != 0:
+    if Y % 100 != 0:
         return True
     
     # 여기까지 온 이상 100의 배수임을 가정해도 됩니다.
     # 그 중 400의 배수라면 확실히 윤년입니다.
-    if y % 400 == 0:
+    if Y % 400 == 0:
         return True
     
     # 여기까지 온 이상 100의 배수이지만, 400의 배수가 아닙니다.
@@ -23,7 +23,7 @@ def confirm_year(Y):
 #Y해에 M월 D일이 존재하는 지 확인
 def sol(Y, M, D):
     if M == 2 and D >= 29:
-        if confirm_year(Y) == 'True' and D == 29:
+        if confirm_year(Y) and D == 29:
             return True
         else:
             return False
