@@ -1,23 +1,17 @@
-def sol1(i):
-    if i%2 == 0:
+def judge_number(n):
+    if n % 2 == 0:
+        return False
+    elif n % 10 == 5:
+        return False
+    elif n % 3 == 0 and n % 9 != 0:
+        return False
+    else:
         return True
-    return False
-
-def sol2(i):
-    temp = list(str(i))
-    if temp[len(temp)-1] == '5':
-        return True
-    return False
-
-def sol3(i):
-    if i%3 == 0 and i%9 != 0:
-        return True
-    return False
-
-a, b = map(int, input().split())
 
 cnt = 0
-for i in range(a, b+1):
-    if sol1(i) or sol2(i) or sol3(i):
+a, b = map(int, input().split())
+for i in range(a, b + 1):
+    if judge_number(i):
         cnt += 1
-print((b-a+1)-cnt)
+
+print(cnt)
