@@ -1,15 +1,12 @@
 n = int(input())
 
 def sol(n):
-    global cnt
-
     if n == 1:
-        return cnt
-    cnt += 1
+        return 0
+
     if n%2 == 0:
-        return sol(n//2)
+        return sol(n//2) + 1
     else:
-        return sol(n//3)
+        return sol(n//3) + 1
     
-cnt = 0
 print(sol(n))
