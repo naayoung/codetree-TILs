@@ -13,9 +13,9 @@ def lcm(a, b):
     return a * b // gcd(a, b)
 
 # 리스트에서 첫 번째부터 끝까지의 최소공배수를 재귀적으로 구하는 함수
-def find_lcm_of_list(nums, idx):
+def find_lcm_of_list(num, idx):
     if idx == 0:
-        return nums[0]  # 재귀의 기본 경우
-    return lcm(nums[idx], find_lcm_of_list(nums, idx - 1))
+        return num[0]  # 재귀의 기본 경우
+    return lcm(num[idx], find_lcm_of_list(num, idx - 1))
 
 print(find_lcm_of_list(num, n - 1))
