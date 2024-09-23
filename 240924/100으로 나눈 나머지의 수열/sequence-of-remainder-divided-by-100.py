@@ -1,12 +1,10 @@
 n = int(input())
 
-def sol(n, a, b, i):
-    if n == i:
-        return (a*b)%100
+def sol(n):
     if n == 1:
         return 2
     if n == 2:
         return 4
-    return sol(n, b, (a*b)%100, i+1)
+    return (sol(n-1)*sol(n-2))%100
 
-print(sol(n, 2, 4, 3))
+print(sol(n))
