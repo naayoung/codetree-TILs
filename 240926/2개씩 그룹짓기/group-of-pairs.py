@@ -4,7 +4,7 @@ num = list(map(int, input().split()))
 num.sort()
 max_sum = 0
 
-while True:
+while num:
     num1 = num.pop(0)
     num2 = num.pop(-1)
 
