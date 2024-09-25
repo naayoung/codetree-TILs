@@ -2,4 +2,14 @@ n = int(input())
 num = list(map(int, input().split()))
 
 num.sort()
-print(num[1]+num[2*n-2])
+max_sum = 0
+
+while True:
+    num1 = num.pop(0)
+    num2 = num.pop(-1)
+
+    num_sum = num1 + num2
+
+    if num_sum > max_sum:
+        max_sum = num_sum
+print(max_sum)
