@@ -7,5 +7,7 @@ if m1 == m2:
 else:
     t1 = num_of_days[m1]-d1+1
     answer = t1+d2
+    #월 일수 계산
+    answer += sum(num_of_days[m1+1:m2])
 
 print(answer)
