@@ -16,7 +16,7 @@ def num_of_days(m, d):
 
 total_days = num_of_days(m2, d2) - num_of_days(m1, d1) + 1
 
-if total_days <= total_days%7 and total_days > 7:
+if day_of_week[total_days%7] == A:
     answer = total_days//7+1
 elif total_days < 7:
     answer = 1
