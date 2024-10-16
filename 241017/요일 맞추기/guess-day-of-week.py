@@ -8,8 +8,10 @@ if m1 == m2:
     else:
         answer = day_of_week[7+d2-d1]
 else:
-    if d2-d1 >= 0:
-        answer = day_of_week[d2-d1]+abs((num_of_days[m2]-num_of_days[m1]))
+    temp = num_of_days[m2]-num_of_days[m1]
+    tt = (d2-d1)-(m2-m1)+temp
+    if tt >= 0:
+        answer = day_of_week[tt]
     else:
-        answer = day_of_week[7+d2-d1]+abs((num_of_days[m2]-num_of_days[m1]))
+        answer = day_of_week[7+tt]
 print(answer)
