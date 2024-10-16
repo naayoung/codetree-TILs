@@ -16,11 +16,14 @@ def num_of_days(m, d):
 
 total_days = num_of_days(m2, d2) - num_of_days(m1, d1) + 1
 
-if day_of_week[total_days%7] == A:
-    answer = total_days//7+1
-elif total_days < 7:
-    answer = 1
-else:
-    answer = total_days//7
+# 시작일의 요일을 계산
+start_day_index = (num_of_days(m1, d1) - num_of_days(1, 1)) % 7  # 2024년 1월 1일은 월요일
+day_count = 0
 
-print(answer)
+# 주어진 범위 내에서 A 요일의 등장 횟수 계산
+for i in range(total_days):
+    current_day = day_of_week[(start_day_index + i) % 7]
+    if current_day == A:
+        day_count += 1
+
+print(day_count)
