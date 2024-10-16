@@ -11,12 +11,14 @@ if m1 == m2:
         answer = day_of_week[7+d2-d1]
 else:
     temp = (num_of_days[m1]-d1+1) + d2 + sum(num_of_days[m1+1:m2])
-    #temp = (d2-d1)-(m2-m1)+abs(m2-m1)
-    print(temp)
+    #print(temp)
     if temp >= 0 and temp < 7:
         answer = day_of_week[temp]
     elif temp >= 7:
-        answer = day_of_week[temp%7]
+        if m2 > m1:
+            answer = day_of_week[temp%7-1]
+        else:
+            answer = day_of_week[temp%7+1]
     else:
         answer = day_of_week[7+temp]
 print(answer)
