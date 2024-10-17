@@ -10,9 +10,5 @@ while True:
     n = n//b
 
 #출력
-if b == 4:
-    answer.sort(reverse=False)
-else:
-    answer.sort(reverse=True)
-answer = ''.join(answer)
-print(answer)
+for ans in answer[::-1]:
+    print(ans, end="")
