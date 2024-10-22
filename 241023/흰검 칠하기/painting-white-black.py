@@ -10,19 +10,19 @@ for _ in range(n):
 
     if b == 'L':
         for i in range(m-a+1, m+1):
+            temp1[i] += 1
             if temp1[i] >= 2 and temp2[i] >= 2:
                 color[i] = 'G'
             if color[i] != 'G':
                 color[i] = 'W'
-            temp1[i] += 1
         m = m-a+1
     else:
         for i in range(m, m+a):
+            temp2[i] += 1
             if temp1[i] >= 2 and temp2[i] >= 2:
                 color[i] = 'G'
             if color[i] != 'G':
                 color[i] = 'B'
-            temp2[i] += 1
         m = m+a-1
 
 c1, c2, c3 = 0, 0, 0
