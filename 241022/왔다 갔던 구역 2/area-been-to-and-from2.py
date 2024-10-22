@@ -1,7 +1,7 @@
 n = int(input())
 
-answer = [0] * 20
-m = 10
+answer = [0] * 201
+m = 100
 for _ in range(n):
     a, b = input().split()
     a = int(a)
@@ -13,6 +13,7 @@ for _ in range(n):
         for i in range(m, m+a):
             answer[i] += 1
         m = m+a
+
 ans = 0
 for i in answer:
     if i > 1:
