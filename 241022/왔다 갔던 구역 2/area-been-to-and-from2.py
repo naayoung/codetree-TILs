@@ -6,8 +6,9 @@ for _ in range(n):
     a, b = input().split()
     a = int(a)
     if b == 'L':
-        m = m-a
+        for i in range(m-a, m+1):
+            answer[i] += 1
     else:
-        m = m+a
-    answer[m] += 1
-print(sum(answer))
+        for i in range(m, m+a+1):
+            answer[i] += 1
+print(max(answer))
