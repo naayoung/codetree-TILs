@@ -10,7 +10,7 @@ for _ in range(n):
 
     if b == 'L':
         for i in range(m-a+1, m+1):
-            if temp1[i] >= 2 or temp2[i] >= 2:
+            if temp1[i] >= 2 and temp2[i] >= 2:
                 color[i] = 'G'
             if color[i] != 'G':
                 color[i] = 'W'
@@ -18,7 +18,7 @@ for _ in range(n):
         m = m-a+1
     else:
         for i in range(m, m+a):
-            if temp1[i] >= 2 or temp2[i] >= 2:
+            if temp1[i] >= 2 and temp2[i] >= 2:
                 color[i] = 'G'
             if color[i] != 'G':
                 color[i] = 'B'
