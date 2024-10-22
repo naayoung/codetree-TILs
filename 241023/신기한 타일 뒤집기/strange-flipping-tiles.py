@@ -7,13 +7,13 @@ for _ in range(n):
     a = int(a)
 
     if b == 'L':
-        for i in range(m-a, m):
+        for i in range(m-a+1, m+1):
             color[i] = 'W'
-        m = m-a
+        m = m-a+1
     else:
-        for i in range(m, m+a):
+        for i in range(m, m+a-1):
             color[i] = 'B'
-        m = m+a
+        m = m+a-1
 ans = [0, 0]
 for i in color:
     if i == 'W':
