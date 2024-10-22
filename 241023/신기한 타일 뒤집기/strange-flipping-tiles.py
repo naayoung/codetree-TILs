@@ -1,7 +1,7 @@
 n = int(input())
 
-color = ['']*2001
-m = 1000
+color = ['']*200001
+m = 100000
 for _ in range(n):
     a, b = input().split()
     a = int(a)
