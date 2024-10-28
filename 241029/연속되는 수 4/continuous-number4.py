@@ -1,9 +1,9 @@
 n = int(input())
 temp = [int(input()) for _ in range(n)]
 
-answer, cnt = 0, 1
+answer, cnt = 0, 0
 for i in range(n):
-    if temp[i] > temp[i-1]:
+    if i >= 1 and temp[i] > temp[i-1]:
         cnt += 1
     else:
         cnt = 1
