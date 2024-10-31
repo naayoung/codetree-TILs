@@ -9,7 +9,7 @@ for _ in range(n):
 
     for x in range(x1, x2):
         for y in range(y1, y2):
-            box[x][y] += 1
+            box[x][y] = 1
 
 ans = 0
 for x in range(max_r+1):
