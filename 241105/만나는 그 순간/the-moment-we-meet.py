@@ -27,8 +27,12 @@ for _ in range(m):
             temp_b -= 1
             b.append(temp_b)
 
+answer = -1
 for i in range(len(a)):
-    if a[i] == b[i]:
-        answer = i+1
+    if i > len(b):
         break
+    else:
+        if a[i] == b[i]:
+            answer = i+1
+            break
 print(answer)
