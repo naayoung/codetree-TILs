@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
 
-a, b = [0]*1001, [0]*1001
+a, b = {}, {}
 time_a, time_b = 0, 0
 distance_a, distance_b = 0, 0
 for _ in range(n):
@@ -19,18 +19,17 @@ for _ in range(m):
 
 answer = 0
 m = ''
-for i in range(1001):
+max_time = max(time_a, time_b)
+for i in range(1, max_time+1):
     if m == '':
         if a[i] < b[i]:
             m = 'B' 
         elif a[i] > b[i]:
             m = 'A'
-    elif m == 'A':
-        if a[i] < b[i]:
-            answer += 1
-            m = 'B'
-    elif m == 'B':
-        if a[i] > b[i]:
-            answer += 1
-            m = 'A'
+    elif m == 'A' and a[i] < b[i]:
+        answer += 1
+        m = 'B'
+    elif m == 'B'and a[i] > b[i]:
+        answer += 1
+        m = 'A'
 print(answer)
