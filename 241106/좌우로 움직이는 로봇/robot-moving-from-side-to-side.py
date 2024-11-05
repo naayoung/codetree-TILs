@@ -26,9 +26,17 @@ for _ in range(m):
             distance_b += 1
         b[time_b] = distance_b
 
-min_time = min(time_a, time_b)
-answer = 1
-for i in range(1, min_time+1):
-    if a[i] == b[i] and a[i-1] != b[i-1]:
-        answer += 1
+max_time = max(time_a, time_b)
+answer = 0
+for i in range(1, max_time+1):
+    if i > time_a:
+        if a[time_a] == b[i] and a[time_a] != b[i-1]:
+            answer += 1
+    elif i > time_b:
+        if a[i] == b[time_b] and a[i-1] != b[time_b]:
+            answer += 1
+    else:
+        if a[i] == b[i] and a[i-1] != b[i-1]:
+            answer += 1
+
 print(answer)
