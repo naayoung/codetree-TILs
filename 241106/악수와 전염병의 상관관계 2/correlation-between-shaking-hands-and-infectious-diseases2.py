@@ -12,10 +12,11 @@ people[P-1] = 1
 for i in temp:
     if people[i[1]-1] == 1 or people[i[2]-1] == 1:
         cnt += 1
-        if cnt == T:
-            break
         people[i[1]-1] = 1
         people[i[2]-1] = 1
+
+        if cnt == K:
+            break
 
 answer = ''
 for i in people:
