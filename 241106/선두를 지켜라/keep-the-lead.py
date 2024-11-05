@@ -29,7 +29,7 @@ for i in range(1001):
         if a[i] < b[i]:
             answer += 1
             m = 'B'
-    else:
+    elif m == 'B':
         if a[i] > b[i]:
             answer += 1
             m = 'A'
