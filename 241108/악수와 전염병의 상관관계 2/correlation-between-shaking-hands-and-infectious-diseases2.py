@@ -13,11 +13,20 @@ people[P-1] = 1
 for i in temp:
     if people[i[1]-1] == 1 or people[i[2]-1] == 1:
         if people[i[1]-1] == 1 and cnt[i[1]-1] < K:
-            cnt[i[1]-1] += 1
-            people[i[2]-1] = 1
+            if people[i[2]-1] == 1:
+                cnt[i[1]-1] += 1
+                cnt[i[2]-1] += 1
+            else:
+                cnt[i[1]-1] += 1
+                people[i[2]-1] = 1
+             
         elif people[i[2]-1] == 1 and cnt[i[2]-1] < K:
-            cnt[i[2]-1] += 1
-            people[i[1]-1] = 1
+            if people[i[1]-1] == 1:
+                cnt[i[1]-1] += 1
+                cnt[i[2]-1] += 1
+            else:
+                cnt[i[2]-1] += 1
+                people[i[1]-1] = 1 
 
     cnt_temp = 0
     for j in cnt:
