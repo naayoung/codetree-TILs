@@ -17,8 +17,9 @@ for i in temp:
 
             people[i[1]-1] = 1
             people[i[2]-1] = 1
-        elif cnt[i[1]-1] == K or cnt[i[2]-1] == K:
-            break
+
+            if cnt[i[1]-1] == K or cnt[i[2]-1] == K:
+                break
 
 answer = ''
 for i in people:
