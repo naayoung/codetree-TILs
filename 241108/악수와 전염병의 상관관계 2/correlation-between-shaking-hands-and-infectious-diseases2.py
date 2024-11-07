@@ -28,13 +28,6 @@ for i in temp:
                 cnt[i[2]-1] += 1
                 people[i[1]-1] = 1 
 
-    cnt_temp = 0
-    for j in cnt:
-        if j >= K:
-            cnt_temp += 1
-    if cnt_temp == N:
-        break
-
 answer = ''
 for i in people:
     answer += str(i)
