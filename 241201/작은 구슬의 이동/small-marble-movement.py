@@ -27,5 +27,5 @@ for _ in range(t):
     if in_range(nx, ny):
         x, y = nx, ny
     else:
-        dn = abs(dn-2)
+        dn = 3 - dn
 print(x+1, y+1)
