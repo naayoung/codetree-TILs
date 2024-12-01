@@ -23,7 +23,7 @@ x, y, dn = r-1, c-1, direction(d)
 dxs, dys = [1, 0, -1, 0], [0, -1, 0, 1]
 
 for _ in range(t):
-    nx, ny = r+dxs[dn], c+dys[dn]
+    nx, ny = x+dxs[dn], y+dys[dn]
     if in_range(nx, ny):
         x, y = nx, ny
     else:
