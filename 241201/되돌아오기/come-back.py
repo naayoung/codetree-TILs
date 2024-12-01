@@ -20,12 +20,13 @@ for _ in range(n):
     dr, dd = dir[dr], int(dd)
 
     for _ in range(dd):
-        nx, ny = x+dx[dr], y+dy[dr]
-        x, y = nx, ny
+        x, y = x+dx[dr], y+dy[dr]
+
         time += 1
         if x == 0 and y == 0:
             ans = time
             break
+        break
 
 print(ans)
 
