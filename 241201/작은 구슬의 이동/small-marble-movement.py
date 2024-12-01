@@ -7,13 +7,13 @@ r, c = int(r), int(c)
 
 def direction(d):
     if d == 'U':
-        dn = 3
+        dn = 2
     if d == 'D':
         dn = 1
     if d == 'R':
         dn = 0
     if d == 'L':
-        dn = 2
+        dn = 3
     return dn
 
 def in_range(x, y):
