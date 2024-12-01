@@ -11,9 +11,9 @@ temp = 0
 for t in time:
     temp += 1
     if t == 'L': #왼쪽 회전
-        d = (d-3+2)%4
+        d = (d-1+4)%4
     if t == 'R': #오른쪽 회전
-        d = (d+3)%4
+        d = (d+1)%4
     if t == 'F': #이동
         x, y = x+dx[d], y+dy[d]
         if x == 0 and y == 0:
