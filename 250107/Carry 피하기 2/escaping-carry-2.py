@@ -25,13 +25,10 @@ for nn in nlist:
         temp = 0
         if len(a) > i:
             temp += int(a[::-1][i])
-            #print(nn, i, a[::-1], temp)
         if len(b) > i:
             temp += int(b[::-1][i])
-            #print(nn, i, b[::-1], temp)
         if len(c) > i:
             temp += int(c[::-1][i])
-            #print(nn, i, c[::-1], temp)
 
         if temp >= 10:
             ans = 0
