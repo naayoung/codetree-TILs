@@ -4,7 +4,7 @@ arr = list(map(int, input().split()))
 # Write your code here!
 ans = 0
 for i in range(n):
-    for j in range(i+k, n, k):
-        temp = arr[i:j]
+    temp = arr[i:i+k]
+    if len(temp) == k:
         ans = max(ans, sum(temp))
 print(ans)
