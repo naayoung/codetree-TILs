@@ -22,6 +22,9 @@ for i in range(1, n*m):
         dir_num = (dir_num+1)%4
         
     x, y = x+dxs[dir_num], y+dys[dir_num]
+
+    if i > 90:
+        i = 65 + (i - 65) % 26
     graph[x][y] = chr(i+65)
 
 #출력
