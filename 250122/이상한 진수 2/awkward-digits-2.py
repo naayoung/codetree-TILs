@@ -3,7 +3,7 @@ A = input()
 # Write your code here!
 aa = len(A)
 
-ans = []
+ans = [0]
 temp = 0
 for i in range(aa):
     if A[i] == '1':
