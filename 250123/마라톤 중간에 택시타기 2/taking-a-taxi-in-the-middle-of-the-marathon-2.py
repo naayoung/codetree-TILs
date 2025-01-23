@@ -6,7 +6,7 @@ y = [p[1] for p in points]
 # Write your code here!
 ans = []
 for i in range(1, n-1):
-    ax, ay = 0, 0
+    ax, ay = x[0], y[0]
     temp = 0
     for j in range(1, n):
         if i != j:
