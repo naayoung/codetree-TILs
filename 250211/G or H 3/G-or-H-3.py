@@ -8,7 +8,7 @@ for _ in range(n):
 
 # Write your code here!
 big_socre = 0
-for i in range(1, max(x)-k+1):
+for i in range(1, 10000-k+1):
     score = 0
     for j in range(i, i+k+1):
         if j in x:
