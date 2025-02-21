@@ -7,7 +7,7 @@ for _ in range(N):
     pos[p] += c
 # Write your code here!
 ans = 0
-for c in range(101-K):
+for c in range(101):
     temp = pos[c-K:c+K+1]
     if ans < sum(temp):
         ans = sum(temp)
