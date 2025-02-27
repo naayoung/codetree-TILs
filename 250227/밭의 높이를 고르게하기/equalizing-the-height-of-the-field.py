@@ -5,7 +5,7 @@ num = list(map(int, input().split()))
 #1. T만큼 자르기
 #2. 자른 구간에 최소비용 계산하기
 
-ans = 200
+ans = 100000
 for i in range(0, N-T+1):
     temp_ans = 0
     temp = num[i:i+T]
