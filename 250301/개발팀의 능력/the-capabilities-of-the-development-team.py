@@ -28,6 +28,8 @@ for a in range(n):
                 temp = sum_dev(a, b, c, d)
                 if temp:
                     ans = min(ans, max(temp)-min(temp))
+if ans == sys.maxsize:
+    ans = -1
 print(ans)
 
 
